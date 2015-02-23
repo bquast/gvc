@@ -2,7 +2,7 @@
 Global Value Chain tools in R. This package is in a **very early stage of development**.
 
 ## Installation
-GVC is currently under development and not available on CRAN. Installation from GitHub can to done using
+GVC is currently under development and not available on CRAN. Installation from GitHub is done using
 
 ```r
 install.packages(devtools)
