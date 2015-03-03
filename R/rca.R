@@ -20,6 +20,6 @@ rca <- function ( data, country, sector ) {
   sector_position  <- match(sector,  i)
   
   Eij <- rowSums(data[(((country_position-1)*N)+sector_position),])
-  Eit <- 
+  # Eit <- 
   
 }
