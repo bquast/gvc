@@ -7,9 +7,11 @@
 vertical_specialisation <- function( x ) {
   
   # read attributes
-  N      <- attr(x, "N")
-  G      <- attr(x, "G")
-  rownam <- attr(x, "rownam")
+  k      <- attr(x, "k")
+  i      <- attr(x, "i")
+  # rownam <- attr(x, "rownam")
+  G <- length(k)
+  N <- length(i)
   
     # remove exports to self
   f <- colSums (minus_block_matrix( x, N ) )
