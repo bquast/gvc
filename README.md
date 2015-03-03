@@ -5,7 +5,7 @@ Global Value Chain tools in R. This package is in a **very early stage of develo
 GVC is currently under development and not available on CRAN. Installation from GitHub is done using
 
 ```r
-install.packages(devtools)
+if (!require('devtools')) install.packages('devtools')
 devtools::install_github("bquast/GVC")
 ```
 
