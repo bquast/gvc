@@ -5,5 +5,5 @@
 #' @export
 
 rca <- function ( data, country, sector ) {
-  
+  data <- minus_block_matrix(data, length(sector) )
 }
