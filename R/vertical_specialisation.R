@@ -11,16 +11,8 @@ vertical_specialisation <- function( x ) {
   G      <- attr(x, "G")
   rownam <- attr(x, "rownam")
   
-  # create output vector
-  f <- vector()
-  
-  # sum columns excluding the moving block diagonal of width G (no. of sectors)
-  for (j in 1:N) {
-    p <- seq( ((j-1)*N + 1),
-              j*N         )
-    
-    f[p] <- colSums(x[-p,p])
-  }
+    # remove exports to self
+  f <- colSums (minus_block_matrix( x, N ) )
   
   f <- as.data.frame(f)
   rownames(f) <- rownam
