@@ -19,7 +19,18 @@ rca <- function ( data, country, sector ) {
   country_position <- match(country, k)
   sector_position  <- match(sector,  i)
   
+  # exports of sector from country
   Eij <- rowSums(data[(((country_position-1)*N)+sector_position),])
-  # Eit <- 
   
+  # exports from country
+  Eit <- sum( rowSums( data[((country_position*N)-N+1):(country_position*N),] ) )
+  
+  # exports of sector from countries
+  Enj <- sum( rowSums( data[((seq(1:N)-1)*G)+sector_position,] ) )
+  
+  # exports of sectors from countries
+  Ent <- sum( rowSums( data ))
+  
+  # return Bela Balassa (1965) ratio
+  return( (Eij/Eit)/(Enj/Ent) )
 }
