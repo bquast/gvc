@@ -7,6 +7,10 @@
 rca(data, country, sector)
 }
 \arguments{
+\item{country}{target country}
+
+\item{sector}{target sector}
+
 \item{x}{A Leontief decomposed Inter-Country Input Output table as created by decompr}
 }
 \description{

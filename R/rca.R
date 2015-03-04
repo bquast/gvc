@@ -2,6 +2,8 @@
 #' 
 #' @name rca
 #' @param x A Leontief decomposed Inter-Country Input Output table as created by decompr
+#' @param country target country
+#' @param sector target sector
 #' @export
 
 rca <- function ( data, country, sector ) {
