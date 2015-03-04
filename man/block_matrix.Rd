@@ -3,24 +3,24 @@
 \name{block_matrix}
 \alias{block_matrix}
 \alias{minus_block_matrix}
-\title{Block matrix}
+\title{Minus Block matrix}
 \usage{
-block_matrix(x, s)
-
 minus_block_matrix(x, s)
+
+block_matrix(x, s)
 }
 \arguments{
 \item{x}{a square matrix}
 
-\item{s}{the dimensions (width = height) of the block matrix being selected over the diagonal of matrix x}
+\item{s}{the dimensions (width = height) of the block matrix being dropped over the diagonal of matrix x}
 
 \item{x}{a square matrix}
 
-\item{s}{the dimensions (width = height) of the block matrix being dropped over the diagonal of matrix x}
+\item{s}{the dimensions (width = height) of the block matrix being selected over the diagonal of matrix x}
 }
 \description{
-Block matrix
-
 Minus Block matrix
+
+Block matrix
 }
 
