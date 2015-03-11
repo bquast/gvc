@@ -17,7 +17,7 @@ vertical_specialisation <- function( x ) {
   f <- colSums (minus_block_matrix( x, N ) )
   
   f <- as.data.frame(f)
-  rownames(f) <- rownam
+  # rownames(f) <- rownam
   names(f) <- "vertical_specialisation"
   
   return(f)
