@@ -1,6 +1,6 @@
 #' Minus Block matrix
 #' 
-#' @name block_matrix
+#' @name minus_block_matrix
 #' @param x a square matrix
 #' @param s the dimensions (width = height) of the block matrix being dropped over the diagonal of matrix x
 #' @export
