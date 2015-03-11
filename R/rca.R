@@ -1,7 +1,7 @@
 #' Revealed Comparative Advantage
 #' 
 #' @name rca
-#' @param x A Leontief decomposed Inter-Country Input Output table as created by decompr
+#' @param data A Leontief decomposed Inter-Country Input Output table as created by decompr
 #' @param country target country
 #' @param sector target sector
 #' @export

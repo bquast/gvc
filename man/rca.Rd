@@ -7,11 +7,11 @@
 rca(data, country, sector)
 }
 \arguments{
+\item{data}{A Leontief decomposed Inter-Country Input Output table as created by decompr}
+
 \item{country}{target country}
 
 \item{sector}{target sector}
-
-\item{x}{A Leontief decomposed Inter-Country Input Output table as created by decompr}
 }
 \description{
 Revealed Comparative Advantage
