@@ -1,13 +1,12 @@
 Package: GVC
-Type: Package
-Title: Global Value Chains Tools
 Version: 0.1.0.9000
-Date: 2015-2-23
+Date: 2015-3-11
+Title: Global Value Chains Tools
+Description: Several tools for GVC analysis are implemented.
 Authors@R: c( person("Bastiaan", "Quast", email = "bquast@gmail.com", role =
     c("aut", "cre") ), person("Victor",
     "Kummritz", role = "aut") )
 Maintainer: Bastiaan Quast <bquast@gmail.com>
-Description: Several tools for GVC analysis are implemented.
 Depends:
     R (>= 2.10)
 License: GPL-3
