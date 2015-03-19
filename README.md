@@ -8,13 +8,13 @@ GVC is currently under development and not available on CRAN. Installation from 
 
 ```r
 if (!require('devtools')) install.packages('devtools')
-devtools::install_github("bquast/GVC")
+devtools::install_github("bquast/gvc")
 ```
 
 ## Usage
 
 ```r
-library(GVC)
+library(gvc)
 ```
 
 ## Currently included functions
