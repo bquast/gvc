@@ -15,7 +15,7 @@
 #'             final,
 #'             countries,
 #'             industries,
-#'             out, long=FALSE)
+#'             out)
 #'  
 #'  # apply the vertical_specialisation analysis
 #'  vertical_specialisation(l)
