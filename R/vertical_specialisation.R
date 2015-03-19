@@ -29,7 +29,10 @@ vertical_specialisation <- function( x ) {
   G <- length(k)
   N <- length(i)
   
-    # remove exports to self
+  # transform back to 2dim x 2dim matrix
+  x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
+  
+  # remove exports to self
   f <- colSums (minus_block_matrix( x, N ) )
 
   
