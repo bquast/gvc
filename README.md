@@ -1,6 +1,6 @@
 # gvc
 [![Travis-CI Build Status](https://travis-ci.org/bquast/gvc.png?branch=master)](https://travis-ci.org/bquast/gvc)
-
+[![Coverage Status](https://coveralls.io/repos/bquast/gvc/badge.svg)](https://coveralls.io/r/bquast/gvc)
 
 Global Value Chain tools in R. This package is in a **very early stage of development**.
 
