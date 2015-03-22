@@ -3,6 +3,7 @@
 #' @name vertical_specialisation
 #' @param x A Leontief decomposed Inter-Country Input Output table as created by decompr
 #' @export
+#' @import decompr
 #' @examples 
 #' # load the decompr package
 #' library(decompr)
