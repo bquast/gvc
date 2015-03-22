@@ -1,5 +1,7 @@
 # gvc
-[![Travis-CI Build Status](https://travis-ci.org/bquast/gvc.png?branch=master)](https://travis-ci.org/bquast/gvc) 
+[![Travis-CI Build Status](https://travis-ci.org/bquast/gvc.png?branch=master)](https://travis-ci.org/bquast/gvc)
+
+
 Global Value Chain tools in R. This package is in a **very early stage of development**.
 
 ## Installation
