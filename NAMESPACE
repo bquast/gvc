@@ -2,5 +2,6 @@
 
 export(block_matrix)
 export(minus_block_matrix)
+export(nrca)
 export(rca)
 export(vertical_specialisation)
