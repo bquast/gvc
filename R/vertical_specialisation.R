@@ -46,3 +46,10 @@ vertical_specialisation <- function( x ) {
   return(f)
   
 }
+
+# Americano alias
+
+#' Vertical Specialisation
+#' @name vertical_specialization
+#' @rdname vertical_specialisation
+vertical_specialization <- vertical_specialisation

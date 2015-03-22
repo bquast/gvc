@@ -2,14 +2,19 @@
 % Please edit documentation in R/vertical_specialisation.R
 \name{vertical_specialisation}
 \alias{vertical_specialisation}
+\alias{vertical_specialization}
 \title{Vertical Specialisation}
 \usage{
 vertical_specialisation(x)
+
+vertical_specialization(x)
 }
 \arguments{
 \item{x}{A Leontief decomposed Inter-Country Input Output table as created by decompr}
 }
 \description{
+Vertical Specialisation
+
 Vertical Specialisation
 }
 \examples{
