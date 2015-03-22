@@ -15,7 +15,7 @@ nrca <- function ( data, country, sector ) {
   Eij <- sum( data[ which( data["Exporting_Country"] == country & data["Exporting_Industry"] == sector ), ]["DViX_Fsr"] )
   
   # exports from country of sectors
-  Eit <- sum( data[ which( data["Exporting _Country"] == country ), ]["DViX_Fsr"] )
+  Eit <- sum( data[ which( data["Exporting_Country"] == country ), ]["DViX_Fsr"] )
   
   # exports of sector of countries
   Enj <- sum( data[ which( data["Exporting_Industry"] == sector ), ]["DViX_Fsr"] )
