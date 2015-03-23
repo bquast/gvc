@@ -18,8 +18,8 @@
 #'             industries,
 #'             out)
 #'  
-#'  # apply the vertical_specialisation analysis
-#'  vertical_specialisation(l)
+#'  # apply the Import to Exports analysis
+#'  i2e(l)
 
 i2e <- function( x ) {
   
@@ -58,6 +58,5 @@ vertical_specialisation <- i2e
 # Americano alias
 
 #' Vertical Specialisation
-#' @name i2e
-#' @rdname vertical_specialisation
-vertical_specialization <- i2e
+#' @rdname i2e
+#' vertical_specialization <- i2e

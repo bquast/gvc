@@ -31,7 +31,7 @@ l <- decomp(inter,
             industries,
             out)
 
- # apply the vertical_specialisation analysis
- vertical_specialisation(l)
+ # apply the Import to Exports analysis
+ i2e(l)
 }
 
