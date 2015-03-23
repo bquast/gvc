@@ -7,7 +7,7 @@
 nrca(data, country, sector)
 }
 \arguments{
-\item{data}{A Wang-Wei-Zhu decomposed Inter-Country Input Output table as created by decompr}
+\item{data}{A decomposed Inter-Country Input Output table as created by decompr}
 
 \item{country}{target country}
 
