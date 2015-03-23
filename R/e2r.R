@@ -18,22 +18,38 @@
 #'             industries,
 #'             out)
 #'  
-#'  # apply the Import to Exports analysis
-#'  e2r(l, "Turkey", "Agriculture")
+#'  # apply the Exporting to Re-export
+#'  e2r( l )
 
-e2r <- function( x, country, sector  ) {
+e2r <- function( x ) {
   
-  # remove sourced to self
-  x <- x[ which(x["Source_Country"] == x["Using_Country"]) , ]
+  # read attributes
+  k      <- attr(x, "k")
+  i      <- attr(x, "i")
+  # rownam <- attr(x, "rownam")
+  G <- length(k)
+  N <- length(i)
   
-  # sourcing country and industry
-  Eij <- sum(  x[ which( x["Source_Country"] == country & x["Source_Industry"] == sector ),]["FVAX"]  )
-
-  # using country
-  Ei <- sum( x[ which( x["Using_Country"] == country ), ]["FVAX"] )
+  # transform back to 2dim x 2dim matrix
+  x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
   
+  # remove exports to self
+  f <- rowSums (minus_block_matrix( x, N ) )
   
-  return(Eij / Ei)
-    
+  # divide by own exports
+  for (j in 1:N) {
+    s <- seq( ((j-1)*N + 1), j*N )
+    f[s] <- f[s] / sum(colSums(x[,s]))
+  }
+  
+  f <- as.data.frame(f)
+  f <- cbind(rep(k, each = N),
+             rep(i, times = G),
+             f)
+  rownames(f) <- NULL  
+  names(f) <- c("country", "sector", "e2r")
+  
+  return(f)
+  
 }
 

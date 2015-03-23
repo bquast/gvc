@@ -4,7 +4,7 @@
 \alias{e2r}
 \title{Exporting to Re-export}
 \usage{
-e2r(x, country, sector)
+e2r(x)
 }
 \arguments{
 \item{x}{A Leontief decomposed Inter-Country Input Output table as created by decompr}
@@ -26,7 +26,7 @@ l <- decomp(inter,
             industries,
             out)
 
- # apply the Import to Exports analysis
- e2r(l, "Turkey", "Agriculture")
+ # apply the Exporting to Re-export
+ e2r( l )
 }
 
