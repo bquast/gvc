@@ -19,7 +19,7 @@
 #'             out)
 #'  
 #'  # apply the Import to Exports analysis
-#'  i2e(l)
+#'  i2e( l )
 
 i2e <- function( x ) {
   
@@ -36,6 +36,11 @@ i2e <- function( x ) {
   # remove exports to self
   f <- colSums (minus_block_matrix( x, N ) )
 
+  # divide by own exports
+  for (j in 1:N) {
+    s <- seq( ((j-1)*N + 1), j*N )
+    f[s] <- f[s] / sum(colSums(x[,s]))
+  }
   
   f <- as.data.frame(f)
   f <- cbind(rep(k, each = N),

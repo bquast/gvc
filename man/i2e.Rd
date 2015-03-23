@@ -32,6 +32,6 @@ l <- decomp(inter,
             out)
 
  # apply the Import to Exports analysis
- i2e(l)
+ i2e( l )
 }
 
