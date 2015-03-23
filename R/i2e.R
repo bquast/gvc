@@ -42,7 +42,7 @@ i2e <- function( x ) {
              rep(i, times = G),
              f)
   rownames(f) <- NULL  
-  names(f) <- c("country", "sector", "vertical_specialisation")
+  names(f) <- c("country", "sector", "i2e")
   
   return(f)
   
