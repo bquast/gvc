@@ -1,6 +1,6 @@
-#' Vertical Specialisation
+#' Importing to Export
 #' 
-#' @name vertical_specialisation
+#' @name i2e
 #' @param x A Leontief decomposed Inter-Country Input Output table as created by decompr
 #' @export
 #' @import decompr
@@ -21,7 +21,7 @@
 #'  # apply the vertical_specialisation analysis
 #'  vertical_specialisation(l)
 
-vertical_specialisation <- function( x ) {
+i2e <- function( x ) {
   
   # read attributes
   k      <- attr(x, "k")
@@ -48,9 +48,16 @@ vertical_specialisation <- function( x ) {
   
 }
 
+# alias
+
+#' Vertical Specialization
+#' @rdname i2e
+
+vertical_specialisation <- i2e
+
 # Americano alias
 
 #' Vertical Specialisation
-#' @name vertical_specialization
+#' @name i2e
 #' @rdname vertical_specialisation
-vertical_specialization <- vertical_specialisation
+vertical_specialization <- i2e
