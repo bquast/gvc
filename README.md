@@ -29,3 +29,10 @@ help("vertical_specialisation")
 # new revealed comparative advantage (WWZ)
 help("nrca")
 ```
+
+## TODO
+
+ * [ ] rei
+ * [ ] vax
+
+
