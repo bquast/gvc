@@ -76,3 +76,34 @@ nrca <- function ( x, country, sector ) {
   return( (Eij/Eit)/(Enj/Ent) )
   
 }
+
+nrca2 <- function ( x ) {
+  
+  # extract attributes
+  k      <- attr(x, "k")
+  i      <- attr(x, "i")
+  G <- length(k)
+  N <- length(i)
+  
+  # remove anything but exports to self
+  f <- rowSums(block_matrix(x, N ) )
+  t <- rowSums(block_matrix(x, N) )
+  q <- sum(rowSums(x))
+  
+  # sum across rows (source industry)
+  # divide by own exports to self
+  for (j in 1:N) {
+    s <- seq( ((j-1)*N + 1), j*N )
+    f[s] <- f[s] / sum(rowSums(x[,s]))
+    
+    p <- (seq(1:N)*G) - N + j
+    t[p] <- t[p] / sum(t[p])
+    
+    return( f / ( t / q ) )
+    
+  }
+  
+  # sum( rowSums( x[((seq(1:N)-1)*G)+sector_position,] ) )
+  
+  
+}
