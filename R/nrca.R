@@ -50,60 +50,33 @@ nrca <- function ( x, country, sector ) {
     G <- length(k)
     N <- length(i)
     
-    # remove exports to self
-    x <- minus_block_matrix(x, N )
+    # remove anything but exports to self
+    f <- rowSums(block_matrix(x, N ) )
+    t <- rowSums(block_matrix(x, N) )
+    q <- sum(rowSums(block_matrix(x, N)))
     
-    # match country and sector string with positions in list
-    country_position <- match(country, k)
-    sector_position  <- match(sector,  i)
+    # sum across rows (source industry)
+    # divide by own exports to self
+    for (j in 1:G) {
+      s <- seq( ((j-1)*N + 1), j*N )
+      f[s] <- f[s] / sum(f[s])
+    }
     
-    # exports of sector from country
-    Eij <- rowSums(x[(((country_position-1)*N)+sector_position),])
-    
-    # exports from country
-    Eit <- sum( rowSums( x[((country_position*N)-N+1):(country_position*N),] ) )
-    
-    # exports of sector from countries
-    Enj <- sum( rowSums( x[((seq(1:N)-1)*G)+sector_position,] ) )
-    
-    # exports of sectors from countries
-    Ent <- sum( rowSums( x ))
+    # 
+    for (i in 1:N) {
+      p <- (seq(1:G)*N) - N + i
+      t[p] <- sum(t[p])
+    }
+
+    Eij <- f
+    Eit <- 1
+    Enj <- t
+    Ent <- q
     
   }
   
   
   # return Bela Balassa (1965) ratio
   return( (Eij/Eit)/(Enj/Ent) )
-  
-}
-
-nrca2 <- function ( x ) {
-  
-  # extract attributes
-  k      <- attr(x, "k")
-  i      <- attr(x, "i")
-  G <- length(k)
-  N <- length(i)
-  
-  # remove anything but exports to self
-  f <- rowSums(block_matrix(x, N ) )
-  t <- rowSums(block_matrix(x, N) )
-  q <- sum(rowSums(x))
-  
-  # sum across rows (source industry)
-  # divide by own exports to self
-  for (j in 1:N) {
-    s <- seq( ((j-1)*N + 1), j*N )
-    f[s] <- f[s] / sum(rowSums(x[,s]))
-    
-    p <- (seq(1:N)*G) - N + j
-    t[p] <- t[p] / sum(t[p])
-    
-    return( f / ( t / q ) )
-    
-  }
-  
-  # sum( rowSums( x[((seq(1:N)-1)*G)+sector_position,] ) )
-  
   
 }
