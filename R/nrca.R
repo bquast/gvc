@@ -27,20 +27,37 @@ nrca <- function ( x, country, sector ) {
     
   } else if ( attr(x, "long") == TRUE ) {
     
-    # remove all exports
-    x <- x[ which(x["Source_Country"] == x["Using_Country"]) , ]
     
-    # export of sector of country
-    Eij <- sum( x[ which( x["Source_Country"] == country & x["Source_Industry"] == sector ), ]["FVAX"] )
+    # extract attributes
+    k      <- attr(x, "k")
+    i      <- attr(x, "i")
+    G <- length(k)
+    N <- length(i)
     
-    # exports from country of sectors
-    Eit <- sum( x[ which( x["Source_Country"] == country ), ]["FVAX"] )
+    x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
     
-    # exports of sector of countries
-    Enj <- sum( x[ which( x["Source_Industry"] == sector ), ]["FVAX"] )
+    # remove anything but exports to self
+    f <- rowSums(block_matrix(x, N ) )
+    t <- rowSums(block_matrix(x, N) )
+    q <- sum(rowSums(block_matrix(x, N)))
     
-    # exports of sectors of country
-    Ent <- sum( x["FVAX"] )
+    # sum across rows (source industry)
+    # divide by own exports to self
+    for (j in 1:G) {
+      s <- seq( ((j-1)*N + 1), j*N )
+      f[s] <- f[s] / sum(f[s])
+    }
+    
+    # 
+    for (i in 1:N) {
+      p <- (seq(1:G)*N) - N + i
+      t[p] <- sum(t[p])
+    }
+    
+    Eij <- f
+    Eit <- 1
+    Enj <- t
+    Ent <- q
     
   } else {
     
