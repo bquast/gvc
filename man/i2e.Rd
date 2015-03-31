@@ -3,11 +3,14 @@
 \name{i2e}
 \alias{i2e}
 \alias{vertical_specialisation}
+\alias{vertical_specialization}
 \title{Importing to Export}
 \usage{
 i2e(x)
 
 vertical_specialisation(x)
+
+vertical_specialization(x)
 }
 \arguments{
 \item{x}{A Leontief decomposed Inter-Country Input Output table as created by decompr}
@@ -16,22 +19,7 @@ vertical_specialisation(x)
 Importing to Export
 
 Vertical Specialization
-}
-\examples{
-# load the decompr package
-library(decompr)
 
-# load the example data set
-data(leather)
-
-# create a leontief decomposed data set
-l <- decomp(inter,
-            final,
-            countries,
-            industries,
-            out)
-
- # apply the Import to Exports analysis
- i2e( l )
+Vertical Specialisation
 }
 
