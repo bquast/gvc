@@ -1,4 +1,4 @@
-bibentry(bibtype      = "Manual","
+bibentry(bibtype      = "Manual",
          title        = "gvc Global Value Chain analysis in R",
          author       = c(person("Bastiaan", "Quast"),
                           person("Victor", "Kummritz") ),
