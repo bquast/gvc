@@ -12,5 +12,5 @@ Depends:
 License: GPL-3
 Imports: decompr
 Suggests: testthat,
-    knitr
+          knitr
 VignetteBuilder: knitr
