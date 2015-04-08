@@ -25,16 +25,10 @@ devtools::install_github("bquast/gvc")
 library(gvc)
 
 # built in help files
+help("gvc")
 
-# revealed comparative advantage
-help("rca")
-
-# vertical specialisation
-help("vertical_specialisation")
-# also available as vertical_specialization (with a z)
-
-# new revealed comparative advantage (WWZ)
-help("nrca")
+# included vignette
+vignette("gvc")
 ```
 
 ## TODO
