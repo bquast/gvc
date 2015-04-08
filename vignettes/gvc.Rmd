@@ -9,4 +9,53 @@ vignette: >
   \usepackage[utf8]{inputenc}
 ---
 
+# Data
 
+A typical workflow begins with using the Leontief decomposition in the **decompr** package.
+
+```r
+# load the package
+library(decompr)
+```
+
+We will use the example data set
+
+```r
+data(leather)
+```
+
+and apply the leontief decomposition and post multiply with exports
+
+```
+l <- decomp(inter,
+            final,
+            countries,
+            industries,
+            out)
+```
+
+# Analysis
+
+We can now analyse the **l** object with the **gvc package**
+
+```r
+library(gvc)
+```
+
+For instance, using the **new revealed comparative advantage**.
+
+```r
+nrca(l)
+```
+
+and **importing to export**
+
+```r
+i2e(l)
+```
+
+finally, using **exporting to re-export**
+
+```r
+e2r(l)
+```
