@@ -8,10 +8,6 @@ nrca(x)
 }
 \arguments{
 \item{x}{A decomposed Inter-Country Input Output table as created by decompr}
-
-\item{country}{target country}
-
-\item{sector}{target sector}
 }
 \description{
 New Revealed Comparative Advantage

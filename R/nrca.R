@@ -2,14 +2,11 @@
 #' 
 #' @name nrca
 #' @param x A decomposed Inter-Country Input Output table as created by decompr
-#' @param country target country
-#' @param sector target sector
 #' @export
 
 nrca <- function ( x ) {
   
  if ( attr(x, "long") == TRUE ) {
-    
     
     # extract attributes
     k      <- attr(x, "k")
