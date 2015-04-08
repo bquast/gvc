@@ -4,6 +4,22 @@
 #' @param x A Leontief decomposed Inter-Country Input Output table as created by decompr
 #' @export
 #' @import decompr
+#' @examples 
+#' # load the decompr package
+#' library(decompr)
+#' 
+#' # load the example data set
+#' data(leather)
+#' 
+#' # create a leontief decomposed data set
+#' l <- decomp(inter,
+#'             final,
+#'             countries,
+#'             industries,
+#'             out)
+#'  
+#'  # apply the Exporting to Re-export
+#'  e2r( l )
 
 
 e2r <- function( x ) {
