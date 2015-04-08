@@ -6,26 +6,9 @@
 #' @param sector target sector
 #' @export
 
-nrca <- function ( x, country, sector ) {
+nrca <- function ( x ) {
   
-  if ( attr(x, "decomposition") == "wwz" ) {
-    
-    # remove exports to self
-    x <- x[ which(!x["Exporting_Country"] == x["Importing_Country"]) , ]
-    
-    # export of sector of country
-    Eij <- sum( x[ which( x["Exporting_Country"] == country & x["Exporting_Industry"] == sector ), ]["DViX_Fsr"] )
-    
-    # exports from country of sectors
-    Eit <- sum( x[ which( x["Exporting_Country"] == country ), ]["DViX_Fsr"] )
-    
-    # exports of sector of countries
-    Enj <- sum( x[ which( x["Exporting_Industry"] == sector ), ]["DViX_Fsr"] )
-    
-    # exports of sectors of country
-    Ent <- sum( x["DViX_Fsr"] )
-    
-  } else if ( attr(x, "long") == TRUE ) {
+ if ( attr(x, "long") == TRUE ) {
     
     
     # extract attributes

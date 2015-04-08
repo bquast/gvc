@@ -4,7 +4,7 @@
 \alias{nrca}
 \title{New Revealed Comparative Advantage}
 \usage{
-nrca(x, country, sector)
+nrca(x)
 }
 \arguments{
 \item{x}{A decomposed Inter-Country Input Output table as created by decompr}
