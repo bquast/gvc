@@ -13,20 +13,20 @@ vignette: >
 
 A typical workflow begins with using the Leontief decomposition in the **decompr** package.
 
-```r
+```{r}
 # load the package
 library(decompr)
 ```
 
 We will use the example data set
 
-```r
+```{r}
 data(leather)
 ```
 
 and apply the leontief decomposition and post multiply with exports
 
-```
+```{r}
 l <- decomp(inter,
             final,
             countries,
@@ -38,24 +38,24 @@ l <- decomp(inter,
 
 We can now analyse the **l** object with the **gvc package**
 
-```r
+```{r}
 library(gvc)
 ```
 
 For instance, using the **new revealed comparative advantage**.
 
-```r
+```{r}
 nrca(l)
 ```
 
 and **importing to export**
 
-```r
+```{r}
 i2e(l)
 ```
 
 finally, using **exporting to re-export**
 
-```r
+```{r}
 e2r(l)
 ```

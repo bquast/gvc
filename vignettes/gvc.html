@@ -63,14 +63,20 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>A typical workflow begins with using the Leontief decomposition in the <strong>decompr</strong> package.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># load the package</span>
 <span class="kw">library</span>(decompr)</code></pre>
+<pre><code>## If you use decompr for data analysis,
+## please cite both R and decompr,
+## using citation() and citation(&quot;decompr&quot;) respectively.</code></pre>
 <p>We will use the example data set</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(leather)</code></pre>
 <p>and apply the leontief decomposition and post multiply with exports</p>
-<pre><code>l &lt;- decomp(inter,
+<pre class="sourceCode r"><code class="sourceCode r">l &lt;-<span class="st"> </span><span class="kw">decomp</span>(inter,
             final,
             countries,
             industries,
             out)</code></pre>
+<pre><code>## No method specified, the default method in version 2 of decompr has been changed to Leontief.
+## 
+##             In order to use the Wang-Wei-Zhu (cf. decompr v.1), please specify this explicitly using: method=&quot;wwz&quot;</code></pre>
 </div>
 <div id="analysis" class="section level1">
 <h1>Analysis</h1>
@@ -78,10 +84,32 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(gvc)</code></pre>
 <p>For instance, using the <strong>new revealed comparative advantage</strong>.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nrca</span>(l)</code></pre>
+<pre><code>## [1] 1.2676927 1.0581114 0.1533582 1.0087530 1.3176076 0.3068102 0.8635848
+## [8] 0.7080925 1.9843574</code></pre>
 <p>and <strong>importing to export</strong></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">i2e</span>(l)</code></pre>
+<pre><code>##     country              sector        i2e
+## 1 Argentina         Agriculture 0.05295042
+## 2 Argentina Textile_and_Leather 0.10020580
+## 3 Argentina Transport_Equipment 0.01185222
+## 4    Turkey         Agriculture 0.06573884
+## 5    Turkey Textile_and_Leather 0.09793876
+## 6    Turkey Transport_Equipment 0.02239852
+## 7   Germany         Agriculture 0.03815808
+## 8   Germany Textile_and_Leather 0.03577311
+## 9   Germany Transport_Equipment 0.17206757</code></pre>
 <p>finally, using <strong>exporting to re-export</strong></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">e2r</span>(l)</code></pre>
+<pre><code>##     country              sector         e2r
+## 1 Argentina         Agriculture 0.185803948
+## 2 Argentina Textile_and_Leather 0.143758756
+## 3 Argentina Transport_Equipment 0.006903040
+## 4    Turkey         Agriculture 0.109454262
+## 5    Turkey Textile_and_Leather 0.120451280
+## 6    Turkey Transport_Equipment 0.008654122
+## 7   Germany         Agriculture 0.055703749
+## 8   Germany Textile_and_Leather 0.041852350
+## 9   Germany Transport_Equipment 0.033355704</code></pre>
 </div>
 
 
