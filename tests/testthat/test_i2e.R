@@ -16,7 +16,7 @@ l <- decomp(inter,
 # load the package
 library(gvc)
 
-# apply the Exporting to Re-export
+# apply the Importing to Export 
 li2e <- i2e( l )
 
 # define context
