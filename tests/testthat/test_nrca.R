@@ -8,7 +8,7 @@ library(gvc)
 data(leather)
 
 # define context
-context("output format")
+context("leontief long format")
 
 # create a leontief long decomposed data set
 l <- decomp(inter,
@@ -30,3 +30,24 @@ test_that("output values match", {
 })
 
 # define short context
+context("leontief matrix format")
+
+do <- load_tables_vectors(inter,
+                          final,
+                          countries,
+                          industries,
+                          out)
+
+lm <- leontief(do, long=FALSE)
+
+lm_nrca <- nrca(lm)
+
+test_that("output size matches", {
+  expect_equal( length(lm_nrca), 9 )
+})
+
+test_that("output values match", {
+  expect_equal( lm_nrca[1], 1.267693, tolerance = .02, check.attributes=FALSE)
+  expect_equal( lm_nrca[9], 1.984357, tolerance = .02, check.attributes=FALSE)
+})
+
