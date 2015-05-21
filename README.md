@@ -3,8 +3,6 @@
 [![Coverage Status](https://coveralls.io/repos/bquast/gvc/badge.svg)](https://coveralls.io/r/bquast/gvc)
 [![DOI](https://zenodo.org/badge/4012/bquast/gvc.svg)](http://dx.doi.org/10.5281/zenodo.16506)
 
-Global Value Chain tools in R. This package is in a **very early stage of development**.
-
 ## Installation
 The gvc package is available on CRAN, please note that this is a beta version, the API will change.
 
