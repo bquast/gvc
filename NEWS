@@ -1,6 +1,8 @@
 gvc 0.3.0
 =================
 
+* update README.md to reflect availability on CRAN
+
 * add gvc documentation file
 
 * re-add examples based on decompr 3.0.0
