@@ -9,14 +9,14 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-A typical workflow begins with using the Leontief decomposition in the **decompr** package.
+A typical workflow begins with using the Leontief decomposition in the `decompr` package.
 
 ```{r}
 # load the package
 library(decompr)
 ```
 
-We will use the example data set
+We will use the example data set.
 
 ```{r}
 data(leather)
@@ -32,25 +32,25 @@ l <- decomp(inter,
             out)
 ```
 
-We can now analyse the **l** object with the **gvc package**
+We can now analyse the `l` object with the **gvc** package.
 
 ```{r}
 library(gvc)
 ```
 
-For instance, using the **new revealed comparative advantage**.
+For instance, using the **new revealed comparative advantage** (`nrca()`),
 
 ```{r}
 nrca(l)
 ```
 
-and **importing to export**
+or using **importing to export** (`i2e()`),
 
 ```{r}
 i2e(l)
 ```
 
-finally, using **exporting to re-export**
+finally, using **exporting to re-export** (`e2r()`).
 
 ```{r}
 e2r(l)
