@@ -6,10 +6,8 @@ output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{gvc}
   %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+  %\VignetteEncoding{UTF-8}
 ---
-
-# Data
 
 A typical workflow begins with using the Leontief decomposition in the **decompr** package.
 
@@ -33,8 +31,6 @@ l <- decomp(inter,
             industries,
             out)
 ```
-
-# Analysis
 
 We can now analyse the **l** object with the **gvc package**
 
