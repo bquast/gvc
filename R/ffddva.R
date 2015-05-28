@@ -36,7 +36,7 @@ ffddva <- function ( x ) {
   x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
   
   # remove exports to self
-  f <- colSums (minus_block_matrix( x, N ) )
+  f <- colSums (diagonals::minus_rectangle_matrix( x, N ) )
 
   #   # divide by own exports
   #   for (j in 1:N) {

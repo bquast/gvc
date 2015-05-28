@@ -35,7 +35,7 @@ i2e <- function( x ) {
   x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
   
   # remove exports to self
-  f <- colSums (minus_block_matrix( x, N ) )
+  f <- colSums (diagonals::minus_block_matrix( x, size=N ) )
 
   # divide by own exports
   for (j in 1:N) {

@@ -36,7 +36,7 @@ dfdfva <- function ( x ) {
   x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
   
   # remove everything except exports to self
-  f <- colSums (block_matrix( x, N ) )
+  f <- colSums (diagonals::rectangle_matrix( x, step=N ) )
 
   #   # divide by own exports
   #   for (j in 1:N) {
