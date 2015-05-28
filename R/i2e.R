@@ -21,6 +21,7 @@
 #'  # apply the Import to Exports analysis
 #'  i2e( l )
 
+
 i2e <- function( x ) {
   
   # read attributes
