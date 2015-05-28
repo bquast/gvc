@@ -5,9 +5,12 @@ warnings_are_errors: true
 env:
  global:
    - CRAN: http://cran.rstudio.com
+
+r_packages:
+  - decompr
    
 r_github_packages:
-  - bquast/decompr
+  - bquast/diagonals
   - hadley/testthat
   - jimhester/covr
 
