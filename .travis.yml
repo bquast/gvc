@@ -11,9 +11,6 @@ notifications:
     on_success: change
     on_failure: change
 
-before_install:
-  pip install codecov
-
 r_packages:
   - decompr
    
@@ -24,5 +21,3 @@ r_github_packages:
 
 after_success:
   - Rscript -e 'library(covr);coveralls()'
-  - codecov()
-  
