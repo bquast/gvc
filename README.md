@@ -1,5 +1,6 @@
 gvc
 --------------
+[![CRAN Version](http://www.r-pkg.org/badges/version/gvc)](http://cran.r-project.org/web/packages/gvc/index.html)
 [![Travis-CI Build Status](https://travis-ci.org/bquast/gvc.png?branch=master)](https://travis-ci.org/bquast/gvc)
 [![Coverage Status](https://coveralls.io/repos/bquast/gvc/badge.svg)](https://coveralls.io/r/bquast/gvc)
 
