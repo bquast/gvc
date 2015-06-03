@@ -36,7 +36,7 @@ dfdfva <- function ( x ) {
   x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
   
   # remove everything except exports to self
-  f <- colSums (diagonals::rectangle_matrix( x, step=N ) )
+  f <- colSums (diagonals::minus_rectangle_matrix( x, step=N ) )
 
   #   # divide by own exports
   #   for (j in 1:N) {
@@ -45,11 +45,10 @@ dfdfva <- function ( x ) {
   #   }
   
   f <- as.data.frame(f)
-  f <- cbind(rep(k, each = N),
-             rep(i, times = G),
-             f)
+  f <- cbind(k,
+             f )
   rownames(f) <- NULL  
-  names(f) <- c("country", "sector", "dfdfva")
+  names(f) <- c("country", "dfdfva")
   
   return(f)
   
