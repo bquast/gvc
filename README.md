@@ -51,7 +51,7 @@ help("e2r")
 help("nrca")
 ```
 
-In addition to the help files we provide long form examples in the [vignette]().
+In addition to the help files we provide long form examples in the [vignette](http://cran.r-project.org/web/packages/gvc/vignettes/gvc.html).
 
 ```r
 vignette("gvc")
