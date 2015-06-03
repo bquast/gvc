@@ -4,9 +4,20 @@ gvc
 [![Travis-CI Build Status](https://travis-ci.org/bquast/gvc.png?branch=master)](https://travis-ci.org/bquast/gvc)
 [![Coverage Status](https://coveralls.io/repos/bquast/gvc/badge.svg)](https://coveralls.io/r/bquast/gvc)
 
+Several tools for Global Value Chain ('GVC') analysis are implemented
+
+- 'Importing to Export' (`i2e()`)
+- 'Exporting to Re-export' (`e2r()`)
+- 'New Revealed Comparative Advantage' (`nrca()`)
+
+
+Installation
+--------------
 The gvc package is available on CRAN, please note that this is a beta version, the API will change.
 
-       install.packages("gvc")
+```r
+install.packages("gvc")
+```
 
 Additionally the development version, to be used **at your own peril**, is available from [GitHub](https://github.com/bquast/gvc).
 Installation from GitHub is done using:
@@ -16,20 +27,23 @@ if (!require('devtools')) install.packages('devtools')
 devtools::install_github("bquast/gvc")
 ```
 
+
+Usage
+----------
 Following installation, the package can be loaded using:
 
 ```r
 library(gvc)
 ```
 
-For information on using the package, please refer to the help files    .
+For information on using the package, please refer to the help files.
 
 ```r
 help("gvc")
 help(package = "gvc")
 ```
     
-For examples of usage, see the function specific help pages
+For examples of usage, see the function specific help pages.
 
 ```r
 help("i2e")
@@ -37,7 +51,7 @@ help("e2r")
 help("nrca")
 ```
 
-In addition to the help files we provide long form examples in the **vignettes** .
+In addition to the help files we provide long form examples in the [vignette]().
 
 ```r
 vignette("gvc")
@@ -45,7 +59,10 @@ vignette("gvc")
 # or
 browseVignettes("gvc")
 ```
-    
+
+
+Additional Information
+-----------------------
 An overview of the changes is available in the NEWS file.
 
 ```r
@@ -68,6 +85,7 @@ http://github.com/bquast/gvc
 Bugs can be filed on the GitHub issues page.
 
 https://github.com/bquast/gvc/issues.
+
 
 TODO
 -------------
