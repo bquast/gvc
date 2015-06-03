@@ -2,7 +2,7 @@
 % Please edit documentation in R/dfddva.R
 \name{dfddva}
 \alias{dfddva}
-\title{Domestic Final Demand Foreign Value Added}
+\title{Domestic Final Demand Domestic Value Added}
 \usage{
 dfddva(x)
 }
@@ -10,7 +10,7 @@ dfddva(x)
 \item{x}{A Leontief decomposed Inter-Country Input Output table as created by decompr, which should be post multiplied with final demand (using the parameter: post="final_demand")}
 }
 \description{
-Domestic Final Demand Foreign Value Added
+Domestic Final Demand Domestic Value Added
 }
 \examples{
 # load the decompr package
@@ -29,6 +29,6 @@ l <- decomp(inter,
             post = "final_demand")
 
  # apply dfddva
- dfddva( l[ 1:27, ] )
+ dfddva( l )
 }
 

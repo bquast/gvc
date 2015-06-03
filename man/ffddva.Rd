@@ -29,6 +29,6 @@ l <- decomp(inter,
             post = "final_demand")
 
  # apply ffddva
- ffddva( l[ 1:27, ] )
+ ffddva( l )
 }
 

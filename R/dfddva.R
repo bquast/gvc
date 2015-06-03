@@ -1,4 +1,4 @@
-#' Domestic Final Demand Foreign Value Added
+#' Domestic Final Demand Domestic Value Added
 #' 
 #' @name dfddva
 #' @param x A Leontief decomposed Inter-Country Input Output table as created by decompr, which should be post multiplied with final demand (using the parameter: post="final_demand")
@@ -21,7 +21,7 @@
 #'             post = "final_demand")
 #'  
 #'  # apply dfddva
-#'  dfddva( l[ 1:27, ] )
+#'  dfddva( l )
 
 dfddva <- function ( x ) {
   
@@ -33,7 +33,7 @@ dfddva <- function ( x ) {
   N <- length(i)
   
   # transform back to 2dim x 2dim matrix
-  x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
+  x <- matrix(x[,3], nrow=G*N, byrow=TRUE)
   
   # remove everything except exports to self
   f <- colSums (diagonals::rectangle_matrix( x, step=N ) )

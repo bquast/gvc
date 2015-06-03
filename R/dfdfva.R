@@ -21,7 +21,7 @@
 #'             post = "final_demand")
 #'  
 #'  # apply dfdfva
-#'  dfdfva( l[ 1:27, ] )
+#'  dfdfva( l )
 
 dfdfva <- function ( x ) {
   
@@ -33,7 +33,7 @@ dfdfva <- function ( x ) {
   N <- length(i)
   
   # transform back to 2dim x 2dim matrix
-  x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
+  x <- matrix(x[,3], nrow=G*N, ncol=G, byrow=TRUE)
   
   # remove everything except exports to self
   f <- colSums (diagonals::minus_rectangle_matrix( x, step=N ) )

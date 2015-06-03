@@ -21,7 +21,7 @@
 #'             post = "final_demand")
 #'  
 #'  # apply ffddva
-#'  ffddva( l[ 1:27, ] )
+#'  ffddva( l )
 
 ffddva <- function ( x ) {
   
@@ -33,10 +33,10 @@ ffddva <- function ( x ) {
   N <- length(i)
   
   # transform back to 2dim x 2dim matrix
-  x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
+  x <- matrix(x[,3], nrow=G*N, byrow=TRUE)
   
   # remove exports to self
-  f <- colSums (diagonals::minus_rectangle_matrix( x, N ) )
+  f <- colSums(diagonals::minus_rectangle_matrix( x, N ) )
 
   #   # divide by own exports
   #   for (j in 1:N) {
