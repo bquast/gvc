@@ -35,7 +35,7 @@ e2r <- function( x ) {
   x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
   
   # remove exports to self
-  f <- rowSums (diagonals::minus_block_matrix( x, size=N ) )
+  f <- rowSums ( diagonals::minus_block_matrix( x, size=N ) )
   
   # divide by own exports
   for (j in 1:N) {
