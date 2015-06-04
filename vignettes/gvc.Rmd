@@ -29,7 +29,9 @@ l <- decomp(inter,
             final,
             countries,
             industries,
-            out)
+            out,
+            method = "leontief",
+            post = "exports")
 ```
 
 We can now analyse the `l` object with the **gvc** package.
@@ -48,10 +50,4 @@ or using **importing to export** (`i2e()`),
 
 ```{r}
 i2e(l)
-```
-
-finally, using **exporting to re-export** (`e2r()`).
-
-```{r}
-e2r(l)
 ```
