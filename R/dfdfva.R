@@ -33,7 +33,7 @@ dfdfva <- function ( x ) {
   N <- length(i)
   
   # transform back to 2dim x 2dim matrix
-  x <- matrix(x[,3], nrow=G*N, ncol=G, byrow=TRUE)
+  x <- matrix(x[,4], nrow=G*N, ncol=G, byrow=TRUE)
   
   # remove everything except exports to self
   f <- colSums (diagonals::minus_rectangle_matrix( x, step=N ) )
