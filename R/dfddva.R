@@ -27,8 +27,9 @@ dfddva <- function ( x, aggregate=FALSE ) {
   k      <- attr(x, "k")
   i      <- attr(x, "i")
   # rownam <- attr(x, "rownam")
-  G <- length(k)
-  N <- length(i)
+  G  <- length(k)
+  N  <- length(i)
+  GN <- G*N
   
   # transform back to 2dim x 2dim matrix
   x <- matrix(x[,4], nrow=G*N, byrow=TRUE)
