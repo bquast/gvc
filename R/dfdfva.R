@@ -9,9 +9,6 @@
 #' # load the decompr package
 #' library(decompr)
 #' 
-#' # load the example data set
-#' data(leather)
-#' 
 #' # create a leontief decomposed data set
 #' l <- decomp(inter,
 #'             final,
@@ -44,7 +41,7 @@ dfdfva <- function ( x, aggregate=TRUE ) {
   if (aggregate) {
     x <- colSums(x)
     
-    x <- data.frame(country = k , dfdfva = x)
+    x <- data.frame(Importing_Country = k , dfdfva = x)
     
     return(x)
     
@@ -62,7 +59,7 @@ dfdfva <- function ( x, aggregate=TRUE ) {
     
     x <- matrix(t, byrow=FALSE)
     
-    x <- data.frame(country = rep(k, each=N), industry = rep(i, times=G), dfdfva = x)
+    x <- data.frame(Importing_Country = rep(k, each=N), Source_Industry = rep(i, times=G), dfdfva = x)
     
     return(x)
     
