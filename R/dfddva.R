@@ -23,7 +23,7 @@
 #'  # apply dfddva
 #'  dfddva( l )
 
-dfddva <- function ( x ) {
+dfddva <- function ( x, aggregate=TRUE ) {
   
   # read attributes
   k      <- attr(x, "k")
@@ -36,20 +36,19 @@ dfddva <- function ( x ) {
   x <- matrix(x[,4], nrow=G*N, byrow=TRUE)
   
   # remove everything except exports to self
-  f <- colSums (diagonals::rectangle_matrix( x, step=N ) )
+  x <- diagonals::rectangle_matrix( x, step=N )
+  
+  # aggregate or not
+  if (aggregate) {
+    x <- colSums(x)
+    
+    x <- data.frame(country = k, dfddva = x)
+    
+    return(x)
+    
+  } else {
+    
+  }
 
-  #   # divide by own exports
-  #   for (j in 1:N) {
-  #     s <- seq( ((j-1)*N + 1), j*N )
-  #     f[s] <- f[s] / sum(colSums(x[,s]))
-  #   }
-  
-  f <- as.data.frame(f)
-  f <- cbind(k,
-             f )
-  rownames(f) <- NULL  
-  names(f) <- c("country", "dfddva")
-  
-  return(f)
   
 }

@@ -23,7 +23,7 @@
 #'  # apply ffddva
 #'  ffddva( l )
 
-ffddva <- function ( x ) {
+ffddva <- function ( x, aggregate=TRUE ) {
   
   # read attributes
   k      <- attr(x, "k")
@@ -36,21 +36,21 @@ ffddva <- function ( x ) {
   x <- matrix(x[,4], nrow=G*N, byrow=TRUE)
   
   # remove exports to self
-  f <- colSums(diagonals::minus_rectangle_matrix( x, N ) )
+  x <- diagonals::minus_rectangle_matrix( x, N )
+  
+  # aggregate or not
+  if (aggregate) {
+    x <- colSums(x)
+    
+    # put in output format
+    x <- data.frame(country = k, ffddva = x)
+    
+    # present output
+    return (x)
+  
+  } else {
+    
+  }
 
-  #   # divide by own exports
-  #   for (j in 1:N) {
-  #     s <- seq( ((j-1)*N + 1), j*N )
-  #     f[s] <- f[s] / sum(colSums(x[,s]))
-  #   }
-  
-  f <- as.data.frame(f)
-  f <- cbind(rep(k, each = N),
-             rep(i, times = G),
-             f)
-  rownames(f) <- NULL  
-  names(f) <- c("country", "sector", "ffddva")
-  
-  return(f)
   
 }

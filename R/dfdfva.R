@@ -23,7 +23,7 @@
 #'  # apply dfdfva
 #'  dfdfva( l )
 
-dfdfva <- function ( x ) {
+dfdfva <- function ( x, aggregate=TRUE ) {
   
   # read attributes
   k      <- attr(x, "k")
@@ -32,11 +32,25 @@ dfdfva <- function ( x ) {
   G <- length(k)
   N <- length(i)
   
-  # transform back to 2dim x 2dim matrix
+  # transform back to 2dim x 1dim matrix
   x <- matrix(x[,4], nrow=G*N, ncol=G, byrow=TRUE)
   
   # remove everything except exports to self
-  f <- colSums (diagonals::minus_rectangle_matrix( x, step=N ) )
+  x <- diagonals::minus_rectangle_matrix( x, step=N )
+  
+  # aggregate or not
+  if (aggregate) {
+    x <- colSums(x)
+    
+    x <- data.frame(country = k , dfdfva = x)
+    
+    return(x)
+    
+  } else {
+    
+  }
+  
+  
 
   #   # divide by own exports
   #   for (j in 1:N) {
@@ -44,12 +58,6 @@ dfdfva <- function ( x ) {
   #     f[s] <- f[s] / sum(colSums(x[,s]))
   #   }
   
-  f <- as.data.frame(f)
-  f <- cbind(k,
-             f )
-  rownames(f) <- NULL  
-  names(f) <- c("country", "dfdfva")
-  
-  return(f)
+
   
 }
