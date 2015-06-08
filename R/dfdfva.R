@@ -32,9 +32,10 @@ dfdfva <- function ( x, aggregate=TRUE ) {
   # rownam <- attr(x, "rownam")
   G <- length(k)
   N <- length(i)
+  GN <- G*N
   
   # transform back to 2dim x 1dim matrix
-  x <- matrix(x[,4], nrow=G*N, ncol=G, byrow=TRUE)
+  x <- matrix(x[,4], nrow=GN, ncol=G, byrow=TRUE)
   
   # remove everything except exports to self
   x <- diagonals::minus_rectangle_matrix( x, step=N )
@@ -49,16 +50,22 @@ dfdfva <- function ( x, aggregate=TRUE ) {
     
   } else {
     
+    # create factors for industries
+    f <- gl(N, 1, GN)
+    
+    # create temporary matrix
+    t <- matrix(0, nrow=N, ncol=G)
+    
+    for (j in 1:G) {
+      t[,j] <- tapply(x[,j], f, sum)
+    }
+    
+    x <- matrix(t, byrow=FALSE)
+    
+    x <- data.frame(country = rep(k, each=N), industry = rep(i, times=G), dfdfva = x)
+    
+    return(x)
+    
   }
-  
-  
 
-  #   # divide by own exports
-  #   for (j in 1:N) {
-  #     s <- seq( ((j-1)*N + 1), j*N )
-  #     f[s] <- f[s] / sum(colSums(x[,s]))
-  #   }
-  
-
-  
 }
