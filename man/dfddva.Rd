@@ -8,6 +8,8 @@ dfddva(x, aggregate = TRUE)
 }
 \arguments{
 \item{x}{A Leontief decomposed Inter-Country Input Output table as created by decompr, which should be post multiplied with final demand (using the parameter: post="final_demand")}
+
+\item{aggregate}{should dfddva be aggregated along source industries to a national sum?}
 }
 \description{
 Domestic Final Demand Domestic Value Added
