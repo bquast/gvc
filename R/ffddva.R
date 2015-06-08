@@ -9,9 +9,6 @@
 #' # load the decompr package
 #' library(decompr)
 #' 
-#' # load the example data set
-#' data(leather)
-#' 
 #' # create a leontief decomposed data set
 #' l <- decomp(inter,
 #'             final,
@@ -24,7 +21,7 @@
 #'  # apply ffddva
 #'  ffddva( l )
 
-ffddva <- function ( x, aggregate=TRUE ) {
+ffddva <- function ( x, aggregate=FALSE ) {
   
   # read attributes
   k      <- attr(x, "k")
@@ -39,19 +36,23 @@ ffddva <- function ( x, aggregate=TRUE ) {
   # remove exports to self
   x <- diagonals::minus_rectangle_matrix( x, N )
   
+  # sum across rows
+  x <- rowSums(x)
+  
+  # create output format
+  x <- data.frame(Source_Country = rep(k, each=N), Source_Industry = rep(i, times=G), ffddva = x)
+  
   # aggregate or not
   if (aggregate) {
-    x <- colSums(x)
+    f <- as.factor(x[,1])
     
-    # put in output format
-    x <- data.frame(country = k, ffddva = x)
+    x <- tapply(x[,3], f, sum)
     
-    # present output
-    return (x)
-  
-  } else {
+    x <- data.frame(Source_Country = k, ffddva = x)
     
+    row.names(x) <- NULL
   }
 
+  return(x)
   
 }
