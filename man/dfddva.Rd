@@ -4,7 +4,7 @@
 \alias{dfddva}
 \title{Domestic Final Demand Domestic Value Added}
 \usage{
-dfddva(x, aggregate = TRUE)
+dfddva(x, aggregate = FALSE)
 }
 \arguments{
 \item{x}{A Leontief decomposed Inter-Country Input Output table as created by decompr, which should be post multiplied with final demand (using the parameter: post="final_demand")}
@@ -17,9 +17,6 @@ Domestic Final Demand Domestic Value Added
 \examples{
 # load the decompr package
 library(decompr)
-
-# load the example data set
-data(leather)
 
 # create a leontief decomposed data set
 l <- decomp(inter,
