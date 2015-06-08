@@ -4,7 +4,7 @@
 \alias{dfdfva}
 \title{Domestic Final Demand Foreign Value Added}
 \usage{
-dfdfva(x, aggregate = TRUE)
+dfdfva(x, aggregate = FALSE)
 }
 \arguments{
 \item{x}{A Leontief decomposed Inter-Country Input Output table as created by decompr, which should be post multiplied with final demand (using the parameter: post="final_demand")}

@@ -21,7 +21,7 @@
 #'  # apply dfdfva
 #'  dfdfva( l )
 
-dfdfva <- function ( x, aggregate=TRUE ) {
+dfdfva <- function ( x, aggregate=FALSE ) {
   
   # read attributes
   k      <- attr(x, "k")
