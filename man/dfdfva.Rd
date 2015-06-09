@@ -18,6 +18,9 @@ Domestic Final Demand Foreign Value Added
 # load the decompr package
 library(decompr)
 
+# load the example data
+data(leather)
+
 # create a leontief decomposed data set
 l <- decomp(inter,
             final,
