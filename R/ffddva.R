@@ -37,7 +37,7 @@ ffddva <- function ( x, aggregate=FALSE ) {
   x <- matrix(x[,4], nrow=G*N, byrow=TRUE)
   
   # remove exports to self
-  x <- diagonals::minus_rectangle_matrix( x, N )
+  x <- diagonals::minus_rectangle_matrix( x, steps=G )
   
   # sum across rows
   x <- rowSums(x)
