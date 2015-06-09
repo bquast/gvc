@@ -35,7 +35,7 @@ dfddva <- function ( x, aggregate=FALSE ) {
   x <- matrix(x[,4], nrow=G*N, byrow=TRUE)
   
   # remove everything except exports to self
-  x <- diagonals::rectangle_matrix( x, step=N )
+  x <- diagonals::rectangle_matrix( x, steps=G )
   
   # aggregate or not
   if (aggregate) {
