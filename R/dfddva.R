@@ -9,6 +9,9 @@
 #' # load the decompr package
 #' library(decompr)
 #' 
+#' # load example data
+#' data(leather)
+#' 
 #' # create a leontief decomposed data set
 #' l <- decomp(inter,
 #'             final,
