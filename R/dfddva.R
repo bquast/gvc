@@ -38,7 +38,7 @@ dfddva <- function ( x, aggregate=FALSE ) {
   x <- matrix(x[,4], nrow=G*N, byrow=TRUE)
   
   # remove everything except exports to self
-  x <- diagonals::rectangle_matrix( x, steps=G )
+  x <- diagonals::fatdiag(diagonals::fatdiag( x, steps=G ), steps=G )
   
   # aggregate or not
   if (aggregate) {
