@@ -17,9 +17,9 @@ nrca <- function ( x ) {
     x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
     
     # remove anything but exports to self
-    f <- rowSums(block_matrix(x, N ) )
-    t <- rowSums(block_matrix(x, N) )
-    q <- sum(rowSums(block_matrix(x, N)))
+    f <- rowSums(diagonals::fatdiag(diagonals::fatdiag(x, steps=G ), steps=G) )
+    t <- rowSums(diagonals::fatdiag(diagonals::fatdiag(x, steps=G ), steps=G) )
+    q <- sum(rowSums(diagonals::fatdiag(diagonals::fatdiag(x, steps=G ), steps=G) ))
     
     # sum across rows (source industry)
     # divide by own exports to self
@@ -48,9 +48,9 @@ nrca <- function ( x ) {
     N <- length(i)
     
     # remove anything but exports to self
-    f <- rowSums(block_matrix(x, N ) )
-    t <- rowSums(block_matrix(x, N) )
-    q <- sum(rowSums(block_matrix(x, N)))
+    f <- rowSums(diagonals::fatdiag(diagonals::fatdiag(x, steps=G ), steps=G) )
+    t <- rowSums(diagonals::fatdiag(diagonals::fatdiag(x, steps=G ), steps=G) )
+    q <- sum(rowSums(diagonals::fatdiag(diagonals::fatdiag(x, steps=G ), steps=G) ))
     
     # sum across rows (source industry)
     # divide by own exports to self
