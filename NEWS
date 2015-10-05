@@ -1,3 +1,23 @@
+gvc 0.5.0
+=================
+
+* add dfddva() function
+
+* add downstream() function
+
+* add upstream() function
+
+
+gvc 0.4.0
+=================
+
+* break out matrix manipulation to the new diagonals package
+
+* add ffddva() function
+
+* add dfdfva() function
+
+
 gvc 0.3.0
 =================
 

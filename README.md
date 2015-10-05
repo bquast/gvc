@@ -1,5 +1,6 @@
 gvc
 --------------
+[![License](http://img.shields.io/badge/license-GPLv3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html)
 [![CRAN Version](http://www.r-pkg.org/badges/version/gvc)](http://cran.r-project.org/package=gvc)
 [![RStudio Cloud Downloads](http://cranlogs.r-pkg.org/badges/gvc?color=brightgreen)](http://cran.rstudio.com/package=gvc)
 [![Travis-CI Build Status](https://travis-ci.org/bquast/gvc.png?branch=master)](https://travis-ci.org/bquast/gvc)
@@ -50,6 +51,11 @@ For examples of usage, see the function specific help pages.
 help("i2e")
 help("e2r")
 help("nrca")
+help("upsteam")
+help("downstream")
+help("dfdfva")
+help("ffddva")
+help("dfddva")
 ```
 
 In addition to the help files we provide long form examples in the [vignette](http://cran.r-project.org/web/packages/gvc/vignettes/gvc.html).
@@ -91,8 +97,6 @@ https://github.com/bquast/gvc/issues.
 TODO
 -------------
 
- * [x] `ffddva()`
- * [x] `dfdfva()`
  * [x] `nrca()`
  * [ ] `rei()`
  * [ ] `vax()`
