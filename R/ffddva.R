@@ -38,7 +38,7 @@ ffddva <- function ( x, aggregate=FALSE ) {
   x <- matrix(x[,4], nrow=GN, byrow=TRUE)
 
   # remove exports to self
-  x <- x - diagonals::fatdiag(diagonals::fatdiag( x, steps=G ), steps=G )
+  x <- x - diagonals::fatdiag(diagonals::fatdiag( x, steps=G ), steps=G, nrow=GN, ncol=G )
 
   # sum across rows
   x <- rowSums(x)
