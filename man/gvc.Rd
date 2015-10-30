@@ -5,6 +5,9 @@
 \alias{gvc}
 \alias{gvc-package}
 \title{Global Value Chain analysis}
+\description{
+Several tools for Global Value Chain ('GVC') analysis are implemented.
+}
 \author{
 Bastiaan Quast \email{bquast@gmail.com}
 Victor Kummritz
