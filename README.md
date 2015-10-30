@@ -11,6 +11,11 @@ Several tools for Global Value Chain ('GVC') analysis are implemented
 - 'Importing to Export' (`i2e()`)
 - 'Exporting to Re-export' (`e2r()`)
 - 'New Revealed Comparative Advantage' (`nrca()`)
+- 'Upsteamness' (`upstream()`)
+- 'Downstreamness' (`downstream()`)
+- 'Domestic Final Demand Foreign Value Added' (`dfdfva()`)
+- 'Foreign Final Demand Domestic Value Added' (`ffddva()`)
+- 'Domestic Final Demand Domestic Value Added' (`dfddva()`)
 
 
 Installation

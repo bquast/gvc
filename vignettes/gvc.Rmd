@@ -12,13 +12,14 @@ vignette: >
 A typical workflow begins with using the Leontief decomposition in the `decompr` package.
 
 ```{r}
-# load the package
+# load the decompr package
 library(decompr)
 ```
 
 We will use the example data set.
 
 ```{r}
+# load the example data set
 data(leather)
 ```
 
@@ -31,7 +32,7 @@ l <- decomp(inter,
             industries,
             out,
             method = "leontief",
-            post = "exports")
+            post = "exports"    )
 ```
 
 We can now analyse the `l` object with the **gvc** package.
@@ -40,13 +41,13 @@ We can now analyse the `l` object with the **gvc** package.
 library(gvc)
 ```
 
-For instance, using the **new revealed comparative advantage** (`nrca()`),
+For instance, using the **New Revealed Comparative Advantage** (`nrca()`),
 
 ```{r}
 nrca(l)
 ```
 
-or using **importing to export** (`i2e()`),
+or using **Importing to Export** (`i2e()`),
 
 ```{r}
 i2e(l)

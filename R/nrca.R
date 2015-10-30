@@ -3,6 +3,29 @@
 #' @name nrca
 #' @param x A decomposed Inter-Country Input Output table as created by decompr
 #' @export
+#' @examples 
+#' # load the decompr package
+#' library(decompr)
+#'            
+#' # load the example data set
+#' data(leather)
+#' 
+#' # perform Leontief decomposition
+#' l <- decomp(inter,
+#'             final,
+#'             countries,
+#'             industries,
+#'             out,
+#'             method = "leontief",
+#'             post = "exports"    )
+#' 
+#' # load gvc package
+#' library(gvc)
+#' 
+#' # perform New Revealed Comparative Advantage
+#' nrca(l)
+#' 
+
 
 nrca <- function ( x ) {
   
