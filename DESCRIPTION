@@ -1,7 +1,8 @@
 Package: gvc
-Version: 0.5.0.9000
+Version: 0.5.0.9900
 Title: Global Value Chains Tools
-Description: Several tools for Global Value Chain ('GVC') analysis are implemented.
+Description: Several tools for Global Value Chain ('GVC') analysis are
+    implemented.
 Authors@R: c( person("Bastiaan", "Quast", email = "bquast@gmail.com", role =
     c("aut", "cre") ), person("Victor",
     "Kummritz", role = "aut") )
@@ -11,8 +12,11 @@ Depends:
 License: GPL-3
 URL: http://qua.st/gvc, https://github.com/bquast/gvc
 BugReports: https://github.com/bquast/gvc/issues
-Imports:  decompr,
-          diagonals
-Suggests: testthat,
-          knitr
+Imports:
+    decompr,
+    diagonals
+Suggests:
+    testthat,
+    knitr
 VignetteBuilder: knitr
+RoxygenNote: 5.0.0
