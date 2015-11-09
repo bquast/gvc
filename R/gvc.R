@@ -10,6 +10,6 @@
 NULL
 .onAttach <- function(...) {
   packageStartupMessage('If you use gvc for data analysis,
-please cite both R and decompr,
+please cite both R and gvc,
 using citation() and citation("gvc") respectively.
                         ')}
