@@ -45,10 +45,6 @@ i2e <- function( x, by=NULL, subset=NULL ) {
   # remove exports to self
   f <- x - diagonals::fatdiag(diagonals::fatdiag(x, steps=G), steps=G )
   
-  if (!is.null(by)) {
-    print('something')
-  }
-  
   # sum over columns
   f <- colSums( f )
 
