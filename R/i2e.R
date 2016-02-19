@@ -22,7 +22,7 @@
 #'  i2e( l )
 
 
-i2e <- function( x ) {
+i2e <- function( x, by=NULL, subset=NULL ) {
   
   # read attributes
   k      <- attr(x, "k")
@@ -31,17 +31,32 @@ i2e <- function( x ) {
   G <- length(k)
   N <- length(i)
   
+  # select observations
+  
+  if (!is.null(by)) {
+    position <- which(names(x) == by)
+    x[which(x[position] != subset),]$FVAX <- 0
+  }
+    
+  
   # transform back to 2dim x 2dim matrix
   x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
   
   # remove exports to self
-  f <- colSums ( x - diagonals::fatdiag(diagonals::fatdiag(x, steps=G), steps=G ) )
-
-  # divide by own exports
-  for (j in 1:N) {
-    s <- seq( ((j-1)*N + 1), j*N )
-    f[s] <- f[s] / sum(colSums(x[,s]))
+  f <- x - diagonals::fatdiag(diagonals::fatdiag(x, steps=G), steps=G )
+  
+  if (!is.null(by)) {
+    print('something')
   }
+  
+  # sum over columns
+  f <- colSums( f )
+
+  # # divide by own exports
+  # for (j in 1:N) {
+  #   s <- seq( ((j-1)*N + 1), j*N )
+  #   f[s] <- f[s] / sum(colSums(x[,s]))
+  # }
   
   f <- as.data.frame(f)
   f <- cbind(rep(k, each = N),

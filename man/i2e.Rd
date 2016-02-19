@@ -6,11 +6,11 @@
 \alias{vertical_specialization}
 \title{Importing to Export}
 \usage{
-i2e(x)
+i2e(x, by = NULL, subset = NULL)
 
-vertical_specialisation(x)
+vertical_specialisation(x, by = NULL, subset = NULL)
 
-vertical_specialization(x)
+vertical_specialization(x, by = NULL, subset = NULL)
 }
 \arguments{
 \item{x}{A Leontief decomposed Inter-Country Input Output table as created by decompr}
