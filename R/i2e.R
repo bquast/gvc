@@ -38,7 +38,6 @@ i2e <- function( x, by=NULL, subset=NULL ) {
     position <- which(names(x) == by)
     x[which(x[position] != subset),]$FVAX <- 0
   }
-    
   
   # transform back to 2dim x 2dim matrix
   x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
