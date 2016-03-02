@@ -2,6 +2,8 @@
 #' 
 #' @name i2e
 #' @param x A Leontief decomposed Inter-Country Input Output table as created by decompr
+#' @param by variable to subset by
+#' @param subset value(s) of the subset variable to select
 #' @export
 #' @import decompr
 #' @examples 
