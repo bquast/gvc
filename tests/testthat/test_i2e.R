@@ -33,6 +33,6 @@ test_that("output order matches", {
 })
 
 test_that("output values match", {
-  expect_equal( li2e[1,3], 0.05295042, tolerance = .002)
-  expect_equal( li2e[9,3], 0.1720676, tolerance = .002)
+  expect_equal( li2e[1,3], 3.404712, tolerance = .002)
+  expect_equal( li2e[9,3], 25.397173, tolerance = .002)
 })

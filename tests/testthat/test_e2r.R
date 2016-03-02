@@ -33,6 +33,6 @@ test_that("output order matches", {
 })
 
 test_that("output values match", {
-  expect_equal( le2r[1,3], 0.1858039, tolerance = .002)
-  expect_equal( le2r[9,3], 0.0333557, tolerance = .002)
+  expect_equal( le2r[1,3], 11.9471938, tolerance = .002)
+  expect_equal( le2r[9,3], 4.9233020, tolerance = .002)
 })
