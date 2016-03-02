@@ -2,6 +2,8 @@
 #' 
 #' @name i2e
 #' @param x A Leontief decomposed Inter-Country Input Output table as created by decompr
+#' @param by variable to subset by
+#' @param subset value(s) of the subset variable to select
 #' @export
 #' @import decompr
 #' @examples 
@@ -32,7 +34,6 @@ i2e <- function( x, by=NULL, subset=NULL ) {
   N <- length(i)
   
   # select observations
-  
   if (!is.null(by)) {
     position <- which(names(x) == by)
     x[which(x[position] != subset),]$FVAX <- 0
