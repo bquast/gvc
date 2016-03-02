@@ -35,13 +35,18 @@ e2r <- function( x ) {
   x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
   
   # remove exports to self
-  f <- rowSums( x - diagonals::fatdiag(diagonals::fatdiag(x, steps=G), steps=G ) )
+  f <- x - diagonals::fatdiag(diagonals::fatdiag(x, steps=G), steps=G )
   
-  # divide by own exports
-  for (j in 1:N) {
-    s <- seq( ((j-1)*N + 1), j*N )
-    f[s] <- f[s] / sum(colSums(x[,s]))
-  }
+  
+  
+  # sum accross rows
+  f <- rowSums( f )
+  
+  # # divide by own exports
+  # for (j in 1:N) {
+  #   s <- seq( ((j-1)*N + 1), j*N )
+  #   f[s] <- f[s] / sum(colSums(x[,s]))
+  # }
   
   f <- as.data.frame(f)
   f <- cbind(rep(k, each = N),
