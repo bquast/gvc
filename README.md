@@ -2,7 +2,8 @@ gvc
 --------------
 [![License](http://img.shields.io/badge/license-GPLv3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html)
 [![CRAN Version](http://www.r-pkg.org/badges/version/gvc)](http://cran.r-project.org/package=gvc)
-[![RStudio Cloud Downloads](http://cranlogs.r-pkg.org/badges/gvc?color=brightgreen)](http://cran.rstudio.com/package=gvc)
+[![Total RStudio Cloud Downloads](http://cranlogs.r-pkg.org/badges/grand-total/gvc?color=brightgreen)](http://cran.rstudio.com/package=gvc)
+[![Montly RStudio Cloud Downloads](http://cranlogs.r-pkg.org/badges/gvc?color=brightgreen)](http://cran.rstudio.com/package=gvc)
 [![Travis-CI Build Status](https://travis-ci.org/bquast/gvc.png?branch=master)](https://travis-ci.org/bquast/gvc)
 [![Coverage Status](https://coveralls.io/repos/bquast/gvc/badge.svg)](https://coveralls.io/r/bquast/gvc)
 
