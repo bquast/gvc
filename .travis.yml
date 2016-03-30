@@ -14,7 +14,7 @@ notifications:
 r_packages:
   - decompr
   - diagonals
-  - testthat
+  - rmarkdown
 
 after_success:
   - Rscript -e 'library(covr);coveralls()'
