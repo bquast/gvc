@@ -1,5 +1,5 @@
 language: r
-sudo: required
+sudo: false
 warnings_are_errors: true
 
 env:
@@ -13,11 +13,8 @@ notifications:
 
 r_packages:
   - decompr
-   
-r_github_packages:
-  - bquast/diagonals
-  - hadley/testthat
-  - jimhester/covr
+  - diagonals
+  - rmarkdown
 
 after_success:
   - Rscript -e 'library(covr);coveralls()'
