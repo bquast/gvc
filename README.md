@@ -86,7 +86,7 @@ There is also a blog post with information on my [personal website](http://qua.s
 
 http://qua.st/gvc/
 
-This package relies on the [diagonals package](http://qua.st/diagonals) ([CRAN](http:cran.r-project.org/packge=diagonals)).
+This package relies on the [diagonals package](http://qua.st/diagonals) ([CRAN](http:cran.r-project.org/package=diagonals)).
 
 
 Development
