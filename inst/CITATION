@@ -1,16 +1,18 @@
-bibentry(bibtype      = "Manual",
-         title        = "gvc Global Value Chain analysis in R",
-         author       = c(person("Bastiaan", "Quast"),
-                          person("Victor", "Kummritz") ),
+bibentry(bibtype      = "article",
+         title        = "Global Value Chain in LICs",
+         author       = c(person("Victor", "Kummritz"),
+                          person("Bastiaan", "Quast") ),
          organization = "The Graduate Institute",
 		     address      = "Maison de la Paix, Geneva, Switzerland",
-         year         = "2015",
-         url          = "http://qua.st/gvc",
-         textVersion  = "Quast, B.A. and V. Kummritz (2015). gvc: Global Value Chain analysis in R.",
+		     journal      = "CTEI Working Papers",
+		     number       = "10",
+         year         = "2016",
+         url          = "http://qua.st/decompr/gvc",
+         textVersion  = "Kummritz V. and B.A. Quast (2016). Global Value Chain in LICs. CTEI Working Papers, 10.",
 		 
 		 
-		mheader       = "To cite decompr in publications please use:",
+		mheader       = "To cite gvc in publications please use:",
 
-		mfooter       = "We have invested a lot of time and effort in creating decompr, please cite it when using it for data analysis. See also 'citation()' for citing R."
+		mfooter       = "We have invested a lot of time and effort in creating gvc, please cite it when using it for data analysis. See also 'citation()' for citing R."
 		
 )
