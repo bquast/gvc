@@ -33,4 +33,3 @@ l <- decomp(inter,
  # apply dfdfva
  dfdfva( l )
 }
-

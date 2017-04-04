@@ -35,4 +35,3 @@ library(gvc)
 nrca(l)
 
 }
-

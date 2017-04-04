@@ -33,4 +33,3 @@ l <- decomp(inter,
  # apply the Exporting to Re-export
  e2r( l )
 }
-
