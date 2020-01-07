@@ -1,9 +1,9 @@
 gvc
 --------------
-[![License](http://img.shields.io/badge/license-GPLv3-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-3.0.html)
-[![CRAN Version](http://www.r-pkg.org/badges/version/gvc)](https://cran.r-project.org/package=gvc)
-[![Total RStudio Cloud Downloads](http://cranlogs.r-pkg.org/badges/grand-total/gvc?color=brightgreen)](https://cran.rstudio.com/package=gvc)
-[![Montly RStudio Cloud Downloads](http://cranlogs.r-pkg.org/badges/gvc?color=brightgreen)](https://cran.rstudio.com/package=gvc)
+[![License](https://img.shields.io/badge/license-GPLv3-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![CRAN Version](https://www.r-pkg.org/badges/version/gvc)](https://cran.r-project.org/package=gvc)
+[![Total RStudio Cloud Downloads](https://cranlogs.r-pkg.org/badges/grand-total/gvc?color=brightgreen)](https://cran.rstudio.com/package=gvc)
+[![Montly RStudio Cloud Downloads](https://cranlogs.r-pkg.org/badges/gvc?color=brightgreen)](https://cran.rstudio.com/package=gvc)
 [![Travis-CI Build Status](https://travis-ci.org/bquast/gvc.png?branch=master)](https://travis-ci.org/bquast/gvc)
 [![Coverage Status](https://coveralls.io/repos/bquast/gvc/badge.svg)](https://coveralls.io/r/bquast/gvc)
 
@@ -64,7 +64,7 @@ help("ffddva")
 help("dfddva")
 ```
 
-In addition to the help files we provide long form examples in the [vignette](http://cran.r-project.org/web/packages/gvc/vignettes/gvc.html).
+In addition to the help files we provide long form examples in the [vignette](https://cran.r-project.org/web/packages/gvc/vignettes/gvc.html).
 
 ```r
 vignette("gvc")
@@ -82,18 +82,18 @@ An overview of the changes is available in the NEWS file.
 news(package="gvc")
 ```
 
-There is also a blog post with information on my [personal website](http://qua.st/).
+There is also a blog post with information on my [personal website](https://qua.st/).
 
-http://qua.st/gvc/
+https://qua.st/gvc/
 
-This package relies on the [diagonals package](http://qua.st/diagonals) ([CRAN](http:cran.r-project.org/package=diagonals)).
+This package relies on the [diagonals package](https://qua.st/diagonals) ([CRAN](https:cran.r-project.org/package=diagonals)).
 
 
 Development
 -------------
 Development takes place on the GitHub page.
 
-http://github.com/bquast/gvc
+https://github.com/bquast/gvc
 
 Bugs can be filed on the GitHub issues page.
 
