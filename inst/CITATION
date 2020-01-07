@@ -13,6 +13,4 @@ bibentry(bibtype      = "article",
 		 
 		mheader       = "To cite gvc in publications please use:",
 
-		mfooter       = "We have invested a lot of time and effort in creating gvc, please cite it when using it for data analysis. See also 'citation()' for citing R."
-		
 )
