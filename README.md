@@ -64,7 +64,7 @@ help("ffddva")
 help("dfddva")
 ```
 
-In addition to the help files we provide long form examples in the [vignette](https://cran.r-project.org/web/packages/gvc/vignettes/gvc.html).
+In addition to the help files we provide long form examples in the vignette.
 
 ```r
 vignette("gvc")
@@ -86,7 +86,7 @@ There is also a blog post with information on my [personal website](https://qua.
 
 https://qua.st/gvc/
 
-This package relies on the [diagonals package](https://qua.st/diagonals) ([CRAN](https:cran.r-project.org/package=diagonals)).
+This package relies on the [diagonals package](https://qua.st/diagonals) ([CRAN](https://cran.r-project.org/package=diagonals)).
 
 
 Development
