@@ -11,11 +11,11 @@ data(leather)
 context("leontief long format")
 
 # create a leontief long decomposed data set
-l <- decomp(inter,
-            final,
-            countries,
-            industries,
-            out)
+l <- decomp(x = inter,
+            y = final,
+            k = countries,
+            i = industries,
+            o = out)
 
 # apply the nrca to leontief
 lnrca <- nrca( l )
