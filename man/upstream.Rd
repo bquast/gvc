@@ -20,11 +20,11 @@ library(decompr)
 data(leather)
 
 # create a leontief decomposed data set
-l <- load_tables_vectors(inter,
-                         final,
-                         countries,
-                         industries,
-                         out        )
+l <- load_tables_vectors(x = inter,
+                         y = final,
+                         k = countries,
+                         i = industries,
+                         o = out        )
  
  # apply upstream
  upstream( l )
