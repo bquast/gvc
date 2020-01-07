@@ -10,7 +10,7 @@ Maintainer: Bastiaan Quast <bquast@gmail.com>
 Depends:
     R (>= 2.10)
 License: GPL-3
-URL: http://qua.st/gvc, https://github.com/bquast/gvc
+URL: https://qua.st/gvc, https://github.com/bquast/gvc
 BugReports: https://github.com/bquast/gvc/issues
 Imports:
     decompr,
