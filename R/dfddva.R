@@ -35,10 +35,10 @@ dfddva <- function ( x, aggregate=FALSE ) {
   GN <- G*N
   
   # transform back to 2dim x 2dim matrix
-  x <- matrix(x[,5], nrow=G*N, byrow=TRUE)
+  x <- matrix(x[,4], nrow=G*N, byrow=TRUE)
   
   # remove everything except exports to self
-  x <- diagonals::fatdiag(diagonals::fatdiag( x, steps=G ), steps=G )
+  x <- diagonals::fatdiag(diagonals::fatdiag( x, steps=G ), steps=G, nrow=GN, ncol=G )
   
   # aggregate or not
   if (aggregate) {
