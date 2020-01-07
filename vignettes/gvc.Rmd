@@ -26,11 +26,11 @@ data(leather)
 and apply the leontief decomposition and post multiply with exports
 
 ```{r}
-l <- decomp(inter,
-            final,
-            countries,
-            industries,
-            out,
+l <- decomp(x = inter,
+            y = final,
+            k = countries,
+            i = industries,
+            o = out,
             method = "leontief",
             post = "exports"    )
 ```
