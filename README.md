@@ -21,7 +21,7 @@ Several tools for Global Value Chain ('GVC') analysis are implemented
 
 Installation
 --------------
-The gvc package is available on [CRAN](https://cran.rstudio.com/package=gvc), please note that this is a beta version, the API will change.
+The gvc package is available on [CRAN](https://cran.r-project.org/package=gvc), please note that this is a beta version, the API will change.
 
 ```r
 install.packages("gvc")
