@@ -32,11 +32,11 @@ test_that("output values match", {
 # define short context
 context("leontief matrix format")
 
-do <- load_tables_vectors(inter,
-                          final,
-                          countries,
-                          industries,
-                          out)
+do <- load_tables_vectors(x = inter,
+                          y = final,
+                          k = countries,
+                          i = industries,
+                          o = out)
 
 lm <- leontief(do, long=FALSE)
 
