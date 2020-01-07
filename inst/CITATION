@@ -1,5 +1,5 @@
 bibentry(bibtype      = "article",
-         title        = "Global Value Chain in Low and Middle Income Countries",
+         title        = "Global Value Chains in Low and Middle Income Countries",
          author       = c(person("Victor", "Kummritz"),
                           person("Bastiaan", "Quast") ),
          organization = "The Graduate Institute",
@@ -7,8 +7,8 @@ bibentry(bibtype      = "article",
 		     journal      = "CTEI Working Papers",
 		     number       = "10",
          year         = "2016",
-         url          = "http://qua.st/decompr/gvc",
-         textVersion  = "Kummritz V. and B.A. Quast (2016). Global Value Chain in Low and Middle Income Countries. CTEI Working Papers, 10.",
+         url          = "https://ideas.repec.org/p/gii/cteiwp/ctei-2016-10.html",
+         textVersion  = "Kummritz V. and B.A. Quast (2016). Global Value Chains in Low and Middle Income Countries. CTEI Working Papers, 10.",
 		 
 		 
 		mheader       = "To cite gvc in publications please use:",
