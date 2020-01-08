@@ -18,6 +18,10 @@ Several tools for Global Value Chain ('GVC') analysis are implemented
 - 'Foreign Final Demand Domestic Value Added' (`ffddva()`)
 - 'Domestic Final Demand Domestic Value Added' (`dfddva()`)
 
+Demonstration
+---------------
+![gvc demonstration](/man/figures/gvc.gif)
+
 
 Installation
 --------------
