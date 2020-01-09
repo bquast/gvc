@@ -20,7 +20,7 @@ Several tools for Global Value Chain ('GVC') analysis are implemented
 
 Demonstration
 ---------------
-![gvc demonstration](/man/figures/gvc.gif)
+![gvc demonstration](https://github.com/bquast/R-demo-GIFs/blob/master/gvc.gif)
 
 
 Installation
