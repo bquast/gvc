@@ -44,7 +44,7 @@ dfddva <- function ( x, aggregate=FALSE ) {
   if (aggregate) {
     x <- colSums(x)
     
-    x <- data.frame(country = k, dfddva = x)
+    x <- data.frame(country = k, dfddva = x, stringsAsFactors=TRUE)
     
     return(x)
     
@@ -62,7 +62,7 @@ dfddva <- function ( x, aggregate=FALSE ) {
     
     x <- matrix(t, byrow=FALSE)
     
-    x <- data.frame(Importing_Country = rep(k, each=N), Source_Industry = rep(i, times=G), dfdfva = x)
+    x <- data.frame(Importing_Country = rep(k, each=N), Source_Industry = rep(i, times=G), dfdfva = x, stringsAsFactors=TRUE)
     
     return(x)
     
