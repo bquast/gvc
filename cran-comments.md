@@ -5,7 +5,7 @@
 - ubuntu (on travis-ci), R 3.6.3
 - win-builder devel
 
-## R CMD check results
+## R CMD check results (win_devel)
 Status: 1 NOTE
 
 * checking CRAN incoming feasibility ... NOTE
@@ -18,3 +18,4 @@ Package was archived on CRAN
 CRAN repository db overrides:
   X-CRAN-Comment: Archived on 2020-04-11 as check problems were not
     corrected despite reminders.
+    
