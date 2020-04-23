@@ -1,3 +1,10 @@
+gvc 1.2.0
+=================
+
+* fix new R default for data.frame: stringsAsFactor=FALSE impacts
+* update documentation
+
+
 gvc 1.1.0
 =================
 
