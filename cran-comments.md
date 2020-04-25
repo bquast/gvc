@@ -1,21 +1,18 @@
 ## Test environments
 
-- local Windows 10 install, R 3.6.3
-- local Linux (Arch) install, R 3.6.3
-- ubuntu (on travis-ci), R 3.6.3
-- win-builder devel
+- local Windows 10 install, R 4.0.0
+- local Linux (Arch) install, R 4.0.0
+- GitHub Actions
+   - Windows Server 2019 (10.0.17763)
+   - MacOS (10.15)
+   - Ubuntu (16.04) , R 4.0.0
+- win-builder
+   - devel
+   - release
 
-## R CMD check results (win_devel)
-Status: 1 NOTE
+── R CMD check results ──────────────────────────────────── gvc 5.2.0 ────
+Duration: 12.4s
 
-* checking CRAN incoming feasibility ... NOTE
-Maintainer: 'Bastiaan Quast <bquast@gmail.com>'
+0 errors ✓ | 0 warnings ✓ | 0 notes ✓
 
-New submission
-
-Package was archived on CRAN
-
-CRAN repository db overrides:
-  X-CRAN-Comment: Archived on 2020-04-11 as check problems were not
-    corrected despite reminders.
-    
+R CMD check succeeded
