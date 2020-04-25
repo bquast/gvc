@@ -35,8 +35,8 @@ Additionally the development version, to be used **at your own peril**, is avail
 Installation from GitHub is done using:
 
 ```r
-if (!require('devtools')) install.packages('devtools')
-devtools::install_github("bquast/gvc")
+if (!require('remotes')) install.packages('remotes')
+remotes::install_github("bquast/gvc")
 ```
 
 
@@ -51,30 +51,30 @@ library(gvc)
 For information on using the package, please refer to the help files.
 
 ```r
-help("gvc")
-help(package = "gvc")
+help('gvc')
+help(package = 'gvc')
 ```
     
 For examples of usage, see the function specific help pages.
 
 ```r
-help("i2e")
-help("e2r")
-help("nrca")
-help("upsteam")
-help("downstream")
-help("dfdfva")
-help("ffddva")
-help("dfddva")
+help('i2e')
+help('e2r')
+help('nrca')
+help('upsteam')
+help('downstream')
+help('dfdfva')
+help('ffddva')
+help('dfddva')
 ```
 
 In addition to the help files we provide long form examples in the vignette.
 
 ```r
-vignette("gvc")
+vignette('gvc')
 
 # or
-browseVignettes("gvc")
+browseVignettes('gvc')
 ```
 
 
@@ -83,7 +83,7 @@ Additional Information
 An overview of the changes is available in the NEWS file.
 
 ```r
-news(package="gvc")
+news(package='gvc')
 ```
 
 There is also a blog post with information on my [personal website](https://qua.st/).
