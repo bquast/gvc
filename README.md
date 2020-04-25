@@ -2,10 +2,10 @@ gvc
 --------------
 [![License](https://img.shields.io/badge/license-GPLv3-brightgreen.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![CRAN Version](https://www.r-pkg.org/badges/version/gvc)](https://cran.r-project.org/package=gvc)
+[![R build status](https://github.com/bquast/gvc/workflows/R-CMD-check/badge.svg)](https://github.com/bquast/gvc/actions?workflow=R-CMD-check)
+[![Coverage Status](https://img.shields.io/codecov/c/github/bquast/gvc/master.svg)](https://codecov.io/bquast/gvc/gvc?branch=master)
 [![Total RStudio Cloud Downloads](https://cranlogs.r-pkg.org/badges/grand-total/gvc?color=brightgreen)](https://cran.r-project.org/package=gvc)
 [![Montly RStudio Cloud Downloads](https://cranlogs.r-pkg.org/badges/gvc?color=brightgreen)](https://cran.r-project.org/package=gvc)
-[![Travis-CI Build Status](https://travis-ci.org/bquast/gvc.png?branch=master)](https://travis-ci.org/bquast/gvc)
-[![Coverage Status](https://coveralls.io/repos/bquast/gvc/badge.svg)](https://coveralls.io/r/bquast/gvc)
 
 Several tools for Global Value Chain ('GVC') analysis are implemented
 
