@@ -5,6 +5,7 @@ library(decompr)
 
 # load the example data set
 data(leather)
+attach(leather)
 
 # create a leontief decomposed data set
 l <- decomp(x = inter,

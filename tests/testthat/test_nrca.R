@@ -6,6 +6,7 @@ library(gvc)
 
 # load the example data set
 data(leather)
+attach(leather)
 
 # define context
 context("leontief long format")

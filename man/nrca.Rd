@@ -18,6 +18,7 @@ library(decompr)
            
 # load the example data set
 data(leather)
+attach(leather)
 
 # perform Leontief decomposition
 l <- decomp(x = inter,

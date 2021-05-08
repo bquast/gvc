@@ -10,6 +10,7 @@
 #' 
 #' # load example data
 #' data(leather)
+#' attach(leather)
 #' 
 #' # create a leontief decomposed data set
 #' l <- load_tables_vectors(x = inter,
