@@ -17,7 +17,8 @@ Imports:
     diagonals
 Suggests:
     testthat,
-    knitr
+    knitr,
+    rmarkdown
 VignetteBuilder: knitr
 RoxygenNote: 7.1.1
 Encoding: UTF-8
