@@ -21,6 +21,7 @@ We will use the example data set.
 ```{r}
 # load the example data set
 data(leather)
+attach(leather)
 ```
 
 and apply the leontief decomposition and post multiply with exports
