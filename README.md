@@ -28,7 +28,7 @@ Installation
 The gvc package is available on [CRAN](https://cran.r-project.org/package=gvc), please note that this is a beta version, the API will change.
 
 ```r
-install.packages("gvc")
+install.packages('gvc')
 ```
 
 Additionally the development version, to be used **at your own peril**, is available from [GitHub](https://github.com/bquast/gvc).
@@ -36,7 +36,7 @@ Installation from GitHub is done using:
 
 ```r
 if (!require('remotes')) install.packages('remotes')
-remotes::install_github("bquast/gvc")
+remotes::install_github('bquast/gvc')
 ```
 
 
@@ -101,12 +101,4 @@ https://github.com/bquast/gvc
 
 Bugs can be filed on the GitHub issues page.
 
-https://github.com/bquast/gvc/issues.
-
-
-TODO
--------------
-
- * [x] `nrca()`
- * [ ] `rei()`
- * [ ] `vax()`
+https://github.com/bquast/gvc/issues
