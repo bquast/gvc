@@ -1,7 +1,7 @@
 ## Test environments
 
-- local Windows 10 install, R 4.0.5
-- local Linux (Arch) install, R 4.0.5
+- local Windows 10 install, R 4.1.2
+- local Linux (Arch) install, R 4.1.2
 - GitHub Actions
    - Windows Server, R release
    - MacOS, R release
@@ -11,7 +11,7 @@
    - devel
    - release
 
-── R CMD check results ────────────────────────────────────────── gvc 5.3.0 ────
+── R CMD check results ───
 Duration: 44.5s
 
 0 errors ✓ | 0 warnings ✓ | 0 notes ✓

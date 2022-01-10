@@ -1,3 +1,8 @@
+gvc 6.2.0
+=================
+* sync version number with decompr
+* update documentation
+
 gvc 1.2.0
 =================
 
