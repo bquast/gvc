@@ -9,5 +9,6 @@
 #' @references {Wang, Zhi, Shang-Jin Wei, and Kunfu Zhu. Quantifying international production sharing at the bilateral and sector levels. No. w19677. National Bureau of Economic Research, 2013.}
 NULL
 .onAttach <- function(...) {
-  packageStartupMessage('Please consider citing both R and gvc,
-using citation() and citation("gvc")                        ')}
+  packageStartupMessage("Please consider citing R and gvc,
+citation()
+citation('gvc')")}
